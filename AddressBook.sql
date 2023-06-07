@@ -139,4 +139,20 @@ mysql> select count(type) from addressbook_table where type = 'Friends';
 +-------------+
 1 row in set (0.00 sec)
 
+mysql>insert into addressbook_table values('Raunak','Rao','book1','Friend','Banka','Bhagalpur','Bihar',84554,222111333,'raunak@gmail.com'),
+('Shiv','Kumar','book2','Family','Badli','Delhi','Delhi',842100,809090909,'shiv@gmail.com');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+-----------+---------+---------+-----------+-------+--------+--------------+------------------+
+| firstname | lastname | book_name | type    | address | city      | state | zip    | phone_number | email            |
++-----------+----------+-----------+---------+---------+-----------+-------+--------+--------------+------------------+
+| Rahul     | Kumar    | book2     | Family  | Banka   | Patna     | Bihar | 813211 | 99934344     | rah@123          |
+| Kundan    | Singh    | book1     | Friends | Seohar  | Patna     | Bihar |  73211 | 967634344    | kun@123          |
+| Raunak    | Rao      | book1     | Friend  | Banka   | Bhagalpur | Bihar |  84554 | 222111333    | raunak@gmail.com |
+| Shiv      | Kumar    | book2     | Family  | Badli   | Delhi     | Delhi | 842100 | 809090909    | shiv@gmail.com   |
++-----------+----------+-----------+---------+---------+-----------+-------+--------+--------------+------------------+
+4 rows in set (0.00 sec)
+
 mysql>
