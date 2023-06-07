@@ -25,4 +25,10 @@ mysql> show databases;
 +----------------------+
 15 rows in set (0.01 sec)
 
+mysql> use address_book_service;
+Database changed
+mysql> create table addressbook_table(firstname varchar(20),lastname varchar(20),address varchar(50),
+city varchar(20),state varchar(20),zip int,phone_number long,email varchar(30));
+Query OK, 0 rows affected (0.10 sec)
+
 mysql>
