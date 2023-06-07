@@ -98,4 +98,29 @@ mysql>select firstname from addressbook_table where city = 'Patna' order by firs
 +-----------+
 2 rows in set (0.00 sec)
 
+mysql>alter table addressbook_table add column book_name varchar(20) after lastname;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table addressbook_table add column type varchar(20) after book_name;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update addressbook_table set book_name = 'book1',type = 'Friends' where firstname in ('Kundan');
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressbook_table set book_name = 'book2',type = 'Family' where firstname in ('Rahul');
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+-----------+---------+---------+-------+-------+--------+--------------+---------+
+| firstname | lastname | book_name | type    | address | city  | state | zip    | phone_number | email   |
++-----------+----------+-----------+---------+---------+-------+-------+--------+--------------+---------+
+| Rahul     | Kumar    | book2     | Family  | Banka   | Patna | Bihar | 813211 | 99934344     | rah@123 |
+| Kundan    | Singh    | book1     | Friends | Seohar  | Patna | Bihar |  73211 | 967634344    | kun@123 |
++-----------+----------+-----------+---------+---------+-------+-------+--------+--------------+---------+
+2 rows in set (0.00 sec)
+
 mysql>
