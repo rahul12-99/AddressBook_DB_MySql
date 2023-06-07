@@ -31,4 +31,20 @@ mysql> create table addressbook_table(firstname varchar(20),lastname varchar(20)
 city varchar(20),state varchar(20),zip int,phone_number long,email varchar(30));
 Query OK, 0 rows affected (0.10 sec)
 
+mysql> insert into addressbook_table(firstname,lastname,address,city,state,zip,phone_number,email) values 
+('Rahul','Kumar','Banka','Patna','Bihar',813211,99934344,'rah@123'),('Kundan','Singh','Seohar','Patna','Bihar',73211,967634344,'kun@123'),
+('Shubham','Sharma','abc','Mum','Mah',765455,865334334,'shu@123');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+| firstname | lastname | address | city  | state | zip    | phone_number | email   |
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+| Rahul     | Kumar    | Banka   | Patna | Bihar | 813211 | 99934344     | rah@123 |
+| Kundan    | Singh    | Seohar  | Patna | Bihar |  73211 | 967634344    | kun@123 |
+| Shubham   | Sharma   | abc     | Mum   | Mah   | 765455 | 865334334    | shu@123 |
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+3 rows in set (0.00 sec)
+
 mysql>
