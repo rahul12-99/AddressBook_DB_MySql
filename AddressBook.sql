@@ -89,4 +89,13 @@ mysql>select count(city),count(state) from addressbook_table where city = 'Patna
 +-------------+--------------+
 1 row in set (0.01 sec)
 
+mysql>select firstname from addressbook_table where city = 'Patna' order by firstname ASC;
++-----------+
+| firstname |
++-----------+
+| Kundan    |
+| Rahul     |
++-----------+
+2 rows in set (0.00 sec)
+
 mysql>
