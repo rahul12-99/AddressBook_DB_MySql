@@ -61,4 +61,16 @@ mysql> select * from addressbook_table;
 +-----------+----------+---------+-------+-------+--------+--------------+---------+
 3 rows in set (0.00 sec)
 
+mysql> delete from addressbook_table where firstname = 'Shubham';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from addressbook_table;
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+| firstname | lastname | address | city  | state | zip    | phone_number | email   |
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+| Rahul     | Kumar    | Banka   | Patna | Bihar | 813211 | 99934344     | rah@123 |
+| Kundan    | Singh    | Seohar  | Patna | Bihar |  73211 | 967634344    | kun@123 |
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+2 rows in set (0.00 sec)
+
 mysql>
