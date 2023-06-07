@@ -123,4 +123,20 @@ mysql> select * from addressbook_table;
 +-----------+----------+-----------+---------+---------+-------+-------+--------+--------------+---------+
 2 rows in set (0.00 sec)
 
+mysql> select count(type) from addressbook_table where type = 'Family';
++-------------+
+| count(type) |
++-------------+
+|           1 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select count(type) from addressbook_table where type = 'Friends';
++-------------+
+| count(type) |
++-------------+
+|           1 |
++-------------+
+1 row in set (0.00 sec)
+
 mysql>
