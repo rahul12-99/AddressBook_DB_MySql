@@ -73,4 +73,12 @@ mysql> select * from addressbook_table;
 +-----------+----------+---------+-------+-------+--------+--------------+---------+
 2 rows in set (0.00 sec)
 
+mysql>select state,city from addressbook_table where firstname = 'Rahul';
++-------+-------+
+| state | city  |
++-------+-------+
+| Bihar | Patna |
++-------+-------+
+1 row in set (0.00 sec)
+
 mysql>
