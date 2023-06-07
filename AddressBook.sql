@@ -47,4 +47,18 @@ mysql> select * from addressbook_table;
 +-----------+----------+---------+-------+-------+--------+--------------+---------+
 3 rows in set (0.00 sec)
 
+mysql>update addressbook_table set address = 'Patna' where firstname = 'Shubham';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+| firstname | lastname | address | city  | state | zip    | phone_number | email   |
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+| Rahul     | Kumar    | Banka   | Patna | Bihar | 813211 | 99934344     | rah@123 |
+| Kundan    | Singh    | Seohar  | Patna | Bihar |  73211 | 967634344    | kun@123 |
+| Shubham   | Sharma   | Patna   | Mum   | Mah   | 765455 | 865334334    | shu@123 |
++-----------+----------+---------+-------+-------+--------+--------------+---------+
+3 rows in set (0.00 sec)
+
 mysql>
